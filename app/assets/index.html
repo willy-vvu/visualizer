@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Visualizer</title>
+  <meta name="author" content="William Wu">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0" />
+  <style>
+body {
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: 200;
+  height: 100%;
+  margin: 0;
+  font-size: 16px;
+}
+#splash {
+  position: relative;
+  text-align: center;
+  height: 100%;
+  z-index: 0;
+}
+#backdrop {
+  position: fixed;
+  z-index: -1000000;
+}
+#backdrop,
+#backdrop canvas {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  width: 100% !important;
+  height: 100% !important;
+}
+#backdrop canvas {
+  position: absolute;
+}
+
+  </style>
+</head>
+
+<body>
+  <div id="backdrop"></div>
+  <section id="splash" style="height: 100%; opacity: 0;">
+    <div style="height:50%;"></div>
+    <audio id="audio" controls src="Aika.mp3"></audio>
+  </section>
+  <script src="app.js"></script>
+  <script>
+    require('main');
+  </script>
+</body>
+
+</html>
